@@ -1,0 +1,41 @@
+
+<div class="card" style="width: 18rem;">
+  <div>{{roomname}}</div>
+
+  <div class=" card-body align-items-center">
+    <div class="row">
+      <div class="col-md-4">
+        <p class="users-card" *ngFor="let user of users">
+          {{user.nickname}}
+        </p>
+      </div>
+      <div class="col-md-8" style="width:300px; height: 600px">
+        <canvas-whiteboard #canvasWhiteboard
+                           [drawButtonClass]="'drawButtonClass'"
+                           [drawButtonText]="'Draw'"
+                           [clearButtonClass]="'clearButtonClass'"
+                           [clearButtonText]="'Clear'"
+                           [undoButtonText]="'Undo'"
+                           [undoButtonEnabled]="true"
+                           [redoButtonText]="'Redo'"
+                           [redoButtonEnabled]="true"
+                           [colorPickerEnabled]="true"
+                           [fillColorPickerText]="'Fill'"
+                           [strokeColorPickerText]="'Stroke'"
+                           [saveDataButtonEnabled]="true"
+                           [saveDataButtonText]="'Save'"
+                           [lineWidth]="5"
+                           [strokeColor]="'rgb(0,0,0)'"
+                           [shouldDownloadDrawing]="true"
+                           (onSave)="onCanvasSave($event)">
+          <!-- (onClear)="onCanvasClear()"
+   (onUndo)="onCanvasUndo($event)"
+   (onRedo)="onCanvasRedo($event)">-->
+        </canvas-whiteboard>
+      </div>
+    </div>
+
+    <button (click)="exitChat">leave room</button>
+  </div>
+</div>
+

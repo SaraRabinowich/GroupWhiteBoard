@@ -1,0 +1,23 @@
+
+
+
+<div class="card card-body">
+
+  <div >
+    <div class="form-group">
+      <label for="Name">Name</label>
+      <input type="text" class="form-control" placeholder="enter name" name="name" [(ngModel)]="nickname" required>
+    </div>
+    <div class="form-group">
+      <label for="Room">Select room</label>
+      <select [(ngModel)]="selectedRoom">
+        <option *ngFor="let room of rooms" name="room" [ngValue]="room">
+          {{room.roomname}}
+        </option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="onFormSubmit()">Join the team</button>
+  </div >
+</div>
+
+<button  color="primary" [routerLink]="['/addroom']">add</button>
