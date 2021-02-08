@@ -10,8 +10,8 @@ import 'firebase/firestore';
 export class AppComponent {
   title = 'Group-White-Board';
   config = {
-    apiKey: 'AIzaSyBpFuKPt3Z967db0FBCFO_cIEuzswIN-1M',
-    databaseURL: 'https://groupwhiteboard-default-rtdb.firebaseio.com'
+    //apiKey: 'AIzaSyBpFuKPt3Z967db0FBCFO_cIEuzswIN-1M',
+    //databaseURL: 'https://groupwhiteboard-default-rtdb.firebaseio.com'
   };
 
   constructor() {
